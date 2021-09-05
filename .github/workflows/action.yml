@@ -1,0 +1,13 @@
+name: 'Runner'
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@master
+      - name: Open proj
+        run: python hello.py
